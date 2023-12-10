@@ -24,7 +24,7 @@ export default function RootLayout({
           className="grid grid-cols-[250px_minmax(100px,1fr)] grid-rows-[60px_minmax(100px,1fr)_50px] 
   h-screen bg-background"
         >
-          <header className="flex justify-between p-2 col-start-2 col-span-4 px-5 border border-b-primary">
+          <header className="flex justify-between p-2 col-start-2 col-span-4 px-5">
             <TopBar />
           </header>
 
@@ -34,7 +34,7 @@ export default function RootLayout({
 
           <section className=" "> {children}</section>
 
-          <footer className="flex justify-evenly p-2 col-start-2 col-span-4 text-primary font-sans">
+          <footer className="flex justify-evenly p-2 col-start-2 col-span-4  font-sans">
             <Footer />
           </footer>
         </main>
