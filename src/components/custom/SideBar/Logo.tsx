@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 import { Aladin } from "next/font/google";
-import { Label } from "../ui/label";
+import { Label } from "@/components/ui/label";
+ 
 const aladin = Aladin({ subsets: ["latin"], weight: "400" });
 
 function Logo() {

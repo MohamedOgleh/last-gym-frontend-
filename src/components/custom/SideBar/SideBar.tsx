@@ -1,9 +1,10 @@
 'use client'
 import { SideBarItems as item } from "@/models/MenuItems";
-import { Label } from "../ui/label";
-import { Button } from "../ui/button";
+ 
 import Logo from "./Logo";
 import { useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 function SideBar() {
   const [openTab,setOpenTab]=useState<number>(0)

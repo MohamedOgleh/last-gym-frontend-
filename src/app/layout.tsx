@@ -1,9 +1,11 @@
-import SideBar from "@/components/custom/SideBar";
+import SideBar from "@/components/custom/SideBar/SideBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import TopBar from "@/components/custom/TopBar/TopBar";
+import Footer from "@/components/custom/Footer/Footer";
 
-const poppins = Poppins({ subsets: ["latin"],weight:['400'] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,14 +22,20 @@ export default function RootLayout({
       <body className={poppins.className}>
         <main
           className="grid grid-cols-[250px_minmax(100px,1fr)] grid-rows-[60px_minmax(100px,1fr)_50px] 
-  bg-red-400 h-screen">
-          <header className="p-2 bg-cyan-300 col-start-2 col-span-4 ">
-            header
+  h-screen bg-background"
+        >
+          <header className="flex justify-between p-2 col-start-2 col-span-4 px-5 border border-b-primary">
+            <TopBar />
           </header>
-          <aside className="flex flex-col justify-start items-center gap-5 p-2 bg-[#0F75B1] row-start-1 row-end-4"><SideBar/></aside>
-          <section className="bg-gray-400 "> {children}</section>
-          <footer className="p-2 bg-cyan-800  col-start-2 col-span-4">
-            footer
+
+          <aside className="flex flex-col justify-start items-center gap-5 p-2 bg-[#0F75B1] row-start-1 row-end-4">
+            <SideBar />
+          </aside>
+
+          <section className=" "> {children}</section>
+
+          <footer className="flex justify-evenly p-2 col-start-2 col-span-4 text-primary font-sans">
+            <Footer />
           </footer>
         </main>
       </body>
