@@ -1,0 +1,13 @@
+  <InputFeilds placeholder="Enter firstname" label="Firstname" info="*" />
+      <br></br>
+      <InputFeilds
+      className="w-96"
+        placeholder="Enter middlename"
+        label="Middlename"
+        leftIcon=<User className="h-5 w-5 text-gray-800" />
+        rightIcon=<Eye className="h-5 w-5  text-gray-800" />
+        errorMessage="something gone wrong"
+      />
+      <br />
+      <br />
+      <DatePicker/>
